@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cheat</title>
+<meta name="keywords" content="Cheat, free css template, website layout, css, xhtml" />
+<meta name="description" content="Cheat, free css template, website layout, xhtml css design" />
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script language="javascript" type="text/javascript">
+//var serverIP = "http://" + "localHost";
+//document.getElementById("resetConnection").setAttribute("href", serverIP);
+
+
+function takePicture() {
+        $.get("/api/camera/takePicture",
+    {
+        //name: "Donald Duck",
+        //city: "Duckburg"
+    },
+    function(data, status){
+        $("#picture_status").html("Data: " + data + "\nStatus: " + status);
+        alert("Data: " + data + "\nStatus: " + status);
+    });
+}
+
+</script>
+</head>
+<body>
+<div id="templatemo_container">
+	<div id="templatemo_header_panel">
+        
+        <div id="templatemo_search_box">
+        	<form method="get" action="#">
+                <input name="keyword" type="text" value="Search..." id="searchfield"  onfocus="clearText(this)" onblur="clearText(this)" />
+                <input type="submit" name="submit" id="searchbutton" value="" />
+             </form>
+        </div>
+    
+    <h1>TODO: check if works using phone as AP, trap ctrl + c for bash</h1>
+    <h1>TODO: do rest for file listing and getPicturesAfterCurrentTimestamp!!!</h1>
+    <h1>TODO: js client for asynch getting new pictures with getPicturesAfterCurrentTimestampand sort them (some how)</h1>
+    <h1>TODO: rest resurs recurent action 'taking picture' it must be able to set capture interwal and time to end the cycle.</h1>
+    <h1>TODO: create UI and logic behind for recurent action 'taking picture'</h1>
+    <h1>TODO: think about security (userName, password, cookie, session.....)</h1>
+    
+    </div> <!-- end of header panel -->
+    
+    <button onclick="takePicture()">Take Picture</button>
+    <a id="resetConnection" href="http://localhost:8889/" + serverIP>ResetConnection</a>
+    <div id="picture_status"></div>
+    
+</html>

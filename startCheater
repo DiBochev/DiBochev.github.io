@@ -1,0 +1,1 @@
+sudo java -Djava.compiler=NONE -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,suspend=y,server=y,address=4008 -jar BochevCheat2000.jar
