@@ -9,83 +9,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 <script language="javascript" type="text/javascript">
-//var serverIP = "http://" + "localHost";
-//document.getElementById("resetConnection").setAttribute("href", serverIP);
-
-
-function takePicture() {
-        var server = "94.236.135.147:8889";
-        $.get(server + "/api/camera/takePicture",
-    {
-        //name: "Donald Duck",
-        //city: "Duckburg"
-    },
-    function(data, status){
-        $("#picture_status").html("Data: " + data + "\nStatus: " + status);
-        alert("Data: " + data + "\nStatus: " + status);
-    });
-}
-
+var serverIP = "http://" + "192.168.0.100";
+window.location.href = serverIP;
 </script>
 </head>
 <body>
-<div id="templatemo_container">
-	<div id="templatemo_header_panel">
-        
-        <div id="templatemo_search_box">
-        	<form method="get" action="#">
-                <input name="keyword" type="text" value="Search..." id="searchfield"  onfocus="clearText(this)" onblur="clearText(this)" />
-                <input type="submit" name="submit" id="searchbutton" value="" />
-             </form>
-        </div>
-    
-    <h1>TODO: check if works using phone as AP, trap ctrl + c for bash</h1>
-    <h1>TODO: do rest for file listing and getPicturesAfterCurrentTimestamp!!!</h1>
-    <h1>TODO: js client for asynch getting new pictures with getPicturesAfterCurrentTimestampand sort them (some how)</h1>
-    <h1>TODO: rest resurs recurent action 'taking picture' it must be able to set capture interwal and time to end the cycle.</h1>
-    <h1>TODO: create UI and logic behind for recurent action 'taking picture'</h1>
-    <h1>TODO: think about security (userName, password, cookie, session.....)</h1>
-    
-    </div> <!-- end of header panel -->
-    
-    <button onclick="takePicture()">Take Picture</button>
-    <a id="resetConnection" href="http://localhost:8889/" + serverIP>ResetConnection</a>
-    <div id="picture_status"></div>
-    <img src="motion/1.png" alt="Mountain View" style="width:640px;height:480px;">
-    <img src="motion/2.png" alt="Mountain View" style="width:640px;height:480px;">
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
