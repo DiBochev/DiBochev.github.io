@@ -2,8 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<script language="javascript" type="text/javascript">
-		var serverIP = "http://" + "192.168.0.100";
-		window.location.href = serverIP;
+			//https://dibochev.github.io/index.html
+			var serverIP = "http://" + "192.168.0.100";
+			history.pushState({}, window.location.href);
+			window.location.href = serverIP;
 		</script>
 	</head>
 	<body>
